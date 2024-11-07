@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SavePlace</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="save_options">Save</string>
+    <string name="save_marker">Save Marker</string>
+    <string name="clear_map">Clear map</string>
+    <string name="location_menu">Locations</string>
+    <string name="Update">Show Marker</string>
+    <string name="empty_fragment">Did not find anything</string>
+    <string name="title_hint">Title…</string>
+    <string name="title">Title</string>
+    <string name="desc_hint">Description…</string>
+    <string name="desc">Description</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+</resources>

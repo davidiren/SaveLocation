@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mapsActivity">
+
+    <fragment
+        android:id="@+id/addMarkerFragment"
+        android:name="se.umu.dair0002.uppgift3.AddMarkerFragment"
+        android:label="fragment_add_marker"
+        tools:layout="@layout/fragment_add_marker" >
+        <argument
+            android:name="markerLocation"
+            app:argType="com.google.android.gms.maps.model.LatLng" />
+    </fragment>
+    <fragment
+        android:id="@+id/markerDetailsFragment"
+        android:name="se.umu.dair0002.uppgift3.MarkerDetailsFragment"
+        android:label="fragment_marker_details"
+        tools:layout="@layout/fragment_marker_details" >
+        <argument
+            android:name="marker_id"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/markerFragment"
+        android:name="se.umu.dair0002.uppgift3.MarkerFragment"
+        android:label="fragment_item_marker_list"
+        tools:layout="@layout/fragment_item_marker_list" >
+        <action
+            android:id="@+id/action_markerFragment_to_markerDetailsFragment"
+            app:destination="@id/markerDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsActivity"
+        android:name="se.umu.dair0002.uppgift3.MapsActivity"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsActivity_to_addMarkerFragment"
+            app:destination="@id/addMarkerFragment" />
+        <action
+            android:id="@+id/action_mapsActivity_to_markerFragment"
+            app:destination="@id/markerFragment" />
+    </fragment>
+</navigation>
